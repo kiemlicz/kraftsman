@@ -31,6 +31,7 @@ lazy val root = (project in file("."))
     ),
     resolvers += "Sonatype releases".at("https://oss.sonatype.org/content/repositories/releases/"),
     libraryDependencies ++= Seq(
+      "com.github.sbt" % "sbt-native-packager_2.12_1.0" % "1.10.0",
       "org.scalatest" %% "scalatest" % "3.2.10" % "test"
     ),
     scriptedLaunchOpts := scriptedLaunchOpts.value ++ Seq("-Xmx1024M", "-Dplugin.version=" + version.value),
