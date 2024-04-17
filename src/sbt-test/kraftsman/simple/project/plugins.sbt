@@ -5,4 +5,4 @@ sys.props.get("plugin.version") match {
        |Specify this property using the scriptedLaunchOpts -D.""".stripMargin
   )
 }
-//addSbtPlugin("io.github.kiemlicz" % "kraftsman" % "0.0.1-1-3363560-dirty-SNAPSHOT")
+//addSbtPlugin("io.github.kiemlicz" % "kraftsman" % "0.0.1-2-983a13f-dirty-SNAPSHOT")

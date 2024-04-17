@@ -1,0 +1,16 @@
+# https://github.com/GoogleContainerTools/kaniko?tab=readme-ov-file#running-kaniko-in-docker
+# local no-auth OCI registry for tests
+# docker compose -f src/test/resources/kaniko/compose.yaml up
+
+version: "3.9"
+services: # multiple chart museum deployments since cannot enable both token and basic auth
+  ocireg-userpass:
+    image: "registry:2.8.3"
+    networks:
+      - kaniko
+    ports:
+      - "5011:5000"
+    environment:
+      - REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY=/data
+networks:
+  kaniko:
